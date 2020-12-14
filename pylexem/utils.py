@@ -94,7 +94,7 @@ class RuleBuilder(object):
                 ("%", "MOD"),
                 ("**", "POW"),
                 ("^^", "POW_C"),
-                ("//", "FLOOR"),
+                # ("//", "FLOOR"),# removed since same as eol comment
                 #
             ]
         )
