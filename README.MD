@@ -2,13 +2,13 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
-# py-lexem - lexem analysis scanner tokenizer
+# pylexem - lexem analysis scanner tokenizer
 
-`py-lexem` is a 1-to-1 scanner and tokenizer with no-loss of information. 
+`pylexem` is a 1-to-1 scanner and tokenizer with no-loss of information. 
 
 if required extra whitespace can be removed from the stream easily from the stream (see sample).
 
-`py-lexem` will create Token or 
+`pylexem` will create Token or 
 [`Lexeme`](https://en.wikipedia.org/wiki/Lexical_analysis#Lexeme)
 where each token has a value and annotation depending on the matched lexical rule.
 
