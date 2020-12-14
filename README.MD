@@ -23,11 +23,10 @@ lexical analysis is done by well formed rules where the  best one
 so it doesnt matter in which order rules are placed in the definition.
 
 E.G. the rules for '=' or '==' will produce always the right '==' lexem
-output when scanning an '==' since there is a look-ahead for the greedy 
-operation is performed internally.
+output when scanning an '==' since there is a look-ahead performed internally
+for finding the greedy solution.
 
-for creating customer lex rules refer also to the predefined set:
-
+for creating customer lex rules refer also to the predefined set: 
 [`utils.py`](https://github.com/kr-g/pylexem/blob/main/pylexem/utils.py)
 
 
