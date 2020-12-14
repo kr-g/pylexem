@@ -34,7 +34,7 @@ lexx = Lexer(alltokens, debug=not True, debugtime=True)
 stream = lexx.tokenize(inp_text)
 
 print("---")
-print("---","1 to 1 scanning result")
+print("---", "1 to 1 scanning result")
 print("---")
 
 for token in stream:
@@ -45,9 +45,8 @@ for token in stream:
 stream = Sanitizer().whitespace(stream)
 
 print("---")
-print("---","without whitespace")
+print("---", "without whitespace")
 print("---")
 
 for token in stream:
     print(token)
-
