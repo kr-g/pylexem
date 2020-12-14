@@ -2,7 +2,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
-# pylexem - lexem analysis scanner tokenizer
+# pylexem - lexeme analysis scanner tokenizer
 
 `pylexem` is a 1-to-1 scanner and tokenizer with no-loss of information. 
 
