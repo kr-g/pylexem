@@ -17,7 +17,7 @@ internally a look-ahead is used to produce the right lexeme
 
 # how to create / use lexical analysis rules
 
-lexical analysis is done by well formed rule where the  best one 
+lexical analysis is done by well formed rules where the  best one 
 (greedy one) is used to produce the exact lexem.
 
 so it doesnt matter in which order rules are placed in the definition.
