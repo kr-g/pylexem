@@ -22,8 +22,8 @@ lexical analysis is done by well formed rules where the  best one
 
 so it doesnt matter in which order rules are placed in the definition.
 
-E.G. the rules for '=' or '==' will produce always the right '==' lexem
-output when scanning an '==' since there is a look-ahead performed internally
+E.G. the result of performing the rules for '=' or '==' will produce always the right '==' lexem
+output when scanning an '==' from the stream since there is a look-ahead performed internally
 for finding the greedy solution.
 
 for creating custom lex rules refer also to the predefined set here: 
