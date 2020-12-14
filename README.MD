@@ -76,7 +76,7 @@ or:
                 (' ', 'BLANK')
                 ('+110', 'INT')
                 (' ', 'BLANK')
-                ('110', 'UINT')
+                ('110', 'UINT')  # UINT is different from INT !!!
                 (' ', 'BLANK')
                 ('\n', 'LF')
                 ('    ', 'TABED')
