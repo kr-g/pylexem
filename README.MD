@@ -6,7 +6,7 @@
 
 `pylexem` is a 1-to-1 scanner and tokenizer with no-loss of information. 
 
-if required extra whitespace information can be removed from the tolken stream easily (see sample).
+if required extra whitespace information can be removed from the token stream easily (see sample).
 
 `pylexem` will create Token or 
 [`Lexeme`](https://en.wikipedia.org/wiki/Lexical_analysis#Lexeme)
