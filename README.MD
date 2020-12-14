@@ -61,7 +61,7 @@ or:
             0. +0. .0 +.0 0.0 +0.1 0.0e-1 +0.0e-1 0.0e1 .0e1 -.0e1
             """
         stream = self.lexx.tokenize(inp_text)
-        self.stream = Sanitizer().whitespace(stream)
+        #self.stream = Sanitizer().whitespace(stream)
     
         for tok in self.stream:
             print(tok)
