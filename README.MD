@@ -109,7 +109,7 @@ or another sample output (without coding):
                 ('    ', 'TABED')
                 ('    ', 'TABED')
                 ('    ', 'TABED')
-                ('(-2+1j)', 'COMPLEX_NUM')
+                ('(-2+1j)', 'COMPLEX_NUM') # new in version v0.0.2
    
 
 # Platform
