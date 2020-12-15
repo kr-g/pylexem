@@ -202,3 +202,34 @@ class Any_Path_TestCase(unittest.TestCase):
         self.assertEqual(complex(res[0][0]), cmplx)
 
         print("found", cmplx)
+
+    def test_complex_multi(self):
+
+        inp_text = """
+            (2-1j)(-2-1j)
+            (.2-1j) (-.2-1j)
+            (2.-1j) (-2.-1j)
+            (2.0-1j) (-2.0-1j)
+            (2-.1j) (2-1.j)
+            (2-0.1j) (2-1.0j)
+        """
+
+        stream = self.lexx.tokenize(inp_text)
+        self.stream = Sanitizer().whitespace(stream)
+
+        res = [
+            ("(2-1j)", "COMPLEX_NUM"),
+            ("(-2-1j)", "COMPLEX_NUM"),
+            ("(.2-1j)", "COMPLEX_NUM"),
+            ("(-.2-1j)", "COMPLEX_NUM"),
+            ("(2.-1j)", "COMPLEX_NUM"),
+            ("(-2.-1j)", "COMPLEX_NUM"),
+            ("(2.0-1j)", "COMPLEX_NUM"),
+            ("(-2.0-1j)", "COMPLEX_NUM"),
+            ("(2-.1j)", "COMPLEX_NUM"),
+            ("(2-1.j)", "COMPLEX_NUM"),
+            ("(2-0.1j)", "COMPLEX_NUM"),
+            ("(2-1.0j)", "COMPLEX_NUM"),
+        ]
+
+        self.assertEqual(res, self.stream)

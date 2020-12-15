@@ -240,24 +240,11 @@ class RuleBuilder(object):
                 (
                     AND(
                         [
-                            OR(
-                                [
-                                    AND(["INT", "DOT"]),
-                                    AND(["OPTSIGN", "DOT", "DIGIT"]),
-                                ]
-                            ),
-                            OPT("UINT"),
-                        ]
-                    ),
-                    "_FRACT",
-                    False,
-                ),
-                (
-                    AND(
-                        [
                             "B_OPEN",
-                            "_FRACT",
-                            "INT",
+                            OPT("SIGNED"),
+                            OR(["FLOAT", "UINT"]),
+                            "SIGNED",
+                            OR(["FLOAT", "UINT"]),
                             Plain("j"),
                             "B_CLOSE",
                         ]

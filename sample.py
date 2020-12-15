@@ -24,7 +24,12 @@ float numbers
 
 "double quoted \t text" and 'double quoted text'
 
-(-2.-1j) (.2-1j) (2.+1j)
+(2-1j)(-2-1j)
+(.2-1j) (-.2-1j)
+(2.-1j) (-2.-1j)
+(2.0-1j) (-2.0-1j)
+(2-.1j) (2-1.j)
+(2-0.1j) (2-1.0j)
 """
 
 tokens = RuleBuilder().add_all().build()
