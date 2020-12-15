@@ -240,15 +240,30 @@ class RuleBuilder(object):
                 (
                     AND(
                         [
+                            OR(
+                                [
+                                    AND(["INT", "DOT"]),
+                                    AND(["OPTSIGN", "DOT", "DIGIT"]),
+                                ]
+                            ),
+                            OPT("UINT"),
+                        ]
+                    ),
+                    "_FRACT",
+                    False,
+                ),
+                (
+                    AND(
+                        [
                             "B_OPEN",
-                            OR(["UINT", "INT"]),
+                            "_FRACT",
                             "INT",
                             Plain("j"),
                             "B_CLOSE",
                         ]
                     ),
                     "COMPLEX_NUM",
-                )
+                ),
             ]
         )
         return self
