@@ -51,6 +51,7 @@ class RuleBuilder(object):
             self.add_char_word,
             self.add_numbers_basic,
             self.add_numbers_float,
+            self.add_numbers_complex,
             self.add_identifier,
             self.add_comments,
             self.add_quoted_strings,
@@ -229,6 +230,25 @@ class RuleBuilder(object):
                 (InSet(["o", "O"]), "_OCTTRAIL", False),
                 (InSet([("0", "8")]), "OCTDIGIT", False),
                 (AND(["ZERO", "_OCTTRAIL", Repeat("OCTDIGIT")]), "OCTNUM"),
+            ]
+        )
+        return self
+
+    def add_numbers_complex(self, blank_cnt=4):
+        self.tokens.extend(
+            [
+                (
+                    AND(
+                        [
+                            "B_OPEN",
+                            OR(["UINT", "INT"]),
+                            "INT",
+                            Plain("j"),
+                            "B_CLOSE",
+                        ]
+                    ),
+                    "COMPLEX_NUM",
+                )
             ]
         )
         return self

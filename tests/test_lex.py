@@ -188,3 +188,17 @@ class Any_Path_TestCase(unittest.TestCase):
         ]
 
         self.assertEqual(res, self.stream)
+
+    def test_complex(self):
+        cmplx = -2 + 1j
+        inp_text = str(cmplx)
+
+        stream = self.lexx.tokenize(inp_text)
+        self.stream = Sanitizer().whitespace(stream)
+
+        res = [("(-2+1j)", "COMPLEX_NUM")]
+
+        self.assertEqual(res, self.stream)
+        self.assertEqual(complex(res[0][0]), cmplx)
+
+        print("found", cmplx)

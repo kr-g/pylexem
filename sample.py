@@ -24,9 +24,11 @@ float numbers
 
 "double quoted \t text" and 'double quoted text'
 
+(-2-1j)
 """
 
 tokens = RuleBuilder().add_all().build()
+
 alltokens = Tokens().extend(tokens)
 
 lexx = Lexer(alltokens, debug=not True, debugtime=True)
